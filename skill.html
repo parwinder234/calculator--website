@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+   <style>
+    
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+      background-color: #07162c;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+
+    header {
+      width: 100%;
+      border-bottom: 1px solid #142841;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .nav-links a:hover {
+      color: #38bdf8;
+    }
+
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    .section-title {
+      font-size: 55px;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px 25px;
+    }
+
+    .skill-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    
+    .card-box {
+      width: 100%;
+      height: 140px;
+      border: 2px solid #38bdf8;
+      border-radius: 12px;
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
+    }
+
+    .card-box i {
+      font-size: 50px;
+      color: #38bdf8;
+      align-self: flex-start; 
+    }
+
+    .skill-name {
+      font-size: 22px;
+      font-weight: bold;
+      color: #38bdf8;
+      align-self: flex-end; 
+    }
+
+    
+    .percentage {
+      font-size: 18px;
+      margin: 12px 0 8px 0;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .progress-bar-bg {
+      width: 80%;
+      height: 8px;
+      background-color: transparent;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background-color: #38bdf8;
+      border-radius: 4px;
+    }
+
+    
+    .card-mysql {
+      grid-column: 2; 
+    }
+
+    .card-github {
+      grid-column: 3; 
+    }
+.card-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover .card-box {
+  transform: translateY(-8px);
+  border-color: #60a5fa; 
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5); 
+}
+
+
+.card-box i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skill-card:hover .card-box i {
+  transform: scale(1.1); 
+  color: #60a5fa;
+}
+
+
+.progress-bar-fill {
+  transition: width 1s ease-in-out, box-shadow 0.3s ease;
+}
+
+.skill-card:hover .progress-bar-fill {
+  box-shadow: 0 0 10px #38bdf8; 
+}
+
+    @media (max-width: 992px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .card-mysql,
+      .card-github {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+      .section-title {
+        font-size: 38px;
+        text-align: center;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#" class="logo">Parwinder.</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="skill.html">Skills</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="resume.html">resume</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="section-title">My Skills</h1>
+
+    <div class="skills-grid">
+      
+      
+      <div class="skill-card">
+        <div class="card-box">
+          <i class="fa-brands fa-html5"></i>
+          <span class="skill-name">HTML</span>
+        </div>
+        <div class="percentage">80%</div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 80%;"></div>
+        </div>
+      </div>
+
+      
+      <div class="skill-card">
+        <div class="card-box">
+          <i class="fa-brands fa-css3-alt"></i>
+          <span class="skill-name">CSS</span>
+        </div>
+        <div class="percentage">90%</div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 90%;"></div>
+        </div>
+      </div>
+
+      
+      <div class="skill-card">
+        <div class="card-box">
+          <i class="fa-brands fa-js"></i>
+          <span class="skill-name">JavaScript</span>
+        </div>
+        <div class="percentage">80%</div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 80%;"></div>
+        </div>
+      </div>
+
+    
+      <div class="skill-card">
+        <div class="card-box">
+          <i class="fa-brands fa-php"></i>
+          <span class="skill-name">PHP</span>
+        </div>
+        <div class="percentage">85%</div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 85%;"></div>
+        </div>
+      </div>
+
+      
+      <div class="skill-card card-mysql">
+        <div class="card-box">
+          <i class="fa-solid fa-database"></i>
+          <span class="skill-name">MySQL</span>
+        </div>
+        <div class="percentage">75%</div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 75%;"></div>
+        </div>
+      </div>
+
+    
+      <div class="skill-card card-github">
+        <div class="card-box">
+          <i class="fa-brands fa-github"></i>
+          <span class="skill-name">Git-Hub</span>
+        </div>
+        <div class="percentage">70%</div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 70%;"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
+
